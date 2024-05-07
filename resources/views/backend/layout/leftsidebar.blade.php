@@ -3,10 +3,8 @@
 
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
-        <div class="sidebar-brand-icon rotate-n-15">
-            <i class="fas fa-laugh-wink"></i>
-        </div>
-        <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+
+        <div class="sidebar-brand-text mx-3">SS25 Admin</div>
     </a>
 
     <!-- Divider -->
@@ -34,7 +32,8 @@
             <i class="fas fa-fw fa-cog"></i>
             <span>Manage Booking Rooms</span>
         </a>
-        <div id="collapseTwo" class="collapse @yield('roomList')" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div id="collapseTwo" class="collapse @yield('roomList')" aria-labelledby="headingTwo"
+             data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="{{url('/room')}}">Room List</a>
                 <a class="collapse-item" href="{{url('/room/create')}}">Add New Room</a>

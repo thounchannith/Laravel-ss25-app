@@ -10,8 +10,16 @@ use Illuminate\Support\Facades\DB;
 
 class RoomController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
+        if (session('user') == null) {
+            return redirect('/login');
+        }
+
         $data['q_search'] = "";
         $data['get_room'] = DB::table('rooms')
             ->join('room_types', 'room_types.room_type_id', '=', 'rooms.room_type_id')
@@ -112,6 +120,8 @@ class RoomController extends Controller
             ->update(['room_active' => '0']);
         return redirect('room');
     }
+
+
 
 }
 

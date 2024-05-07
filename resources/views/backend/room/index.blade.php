@@ -57,10 +57,9 @@
                                     <td>{{ $room->room_name }}</td>
                                     <td>{{ $room->room_desc }}</td>
                                     <td>
-                                        {!! $room->room_status == 1 ? '
-                                         <button type="button" class="btn btn-success">Available </button>'
+                                        {!! $room->room_status == 1 ? '<p class="text-success">Available</p>'
                                          :
-                                         '<button type="button" class="btn btn-danger">Unavailable </button>' !!}
+                                         '<p class="text-danger">Unavailable </p>' !!}
                                     </td>
 
                                     <td>{{ $room->room_type_name }}</td>

@@ -39,4 +39,14 @@ Route::controller(RoomController::class)->group(function (){
 Route::controller(AuthController::class)->group(function (){
     Route::get('login', 'index')->name('login');
     Route::post('login/postLogin', 'postLogin')->name('post.login');
+    Route::get('logout', 'logout')->name('logout');
 });
+
+//Route::get('test',[SessionController::class, 'test']);
+
+//Route::controller(UserController::class)->group(function (){
+//    Route::get('login', 'login');
+//    Route::post('login/dologin', 'dologin');
+//    Route::get('logout', 'logout');
+//});
+

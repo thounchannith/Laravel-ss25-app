@@ -30,9 +30,9 @@
         <!-- Main Content -->
         <div id="content">
 
-            <!-- Topbar -->
+            <!-- Top bar -->
             @include('backend.layout.nav_bar')
-            <!-- End of Topbar -->
+            <!-- End of Top bar -->
 
             <!-- Begin Page Content -->
             @yield('content')
@@ -48,6 +48,7 @@
 
 
 <!-- link footer -->
+@include('backend.layout.logoutModal')
 @include('backend.layout.footer_script')
 
 </body>
